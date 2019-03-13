@@ -97,8 +97,8 @@ function GameMgr:MouseMoved(x, y, dx, dy, istouch)
 end
 
 function GameMgr:KeyBoardDown(key, scancode, isrepeat) 
-    if key == 'tab' then Option.bDebug = not Option.bDebug end
-    if key == 'capslock' then Option.bGameInfo = not Option.bGameInfo end
+    -- if key == 'tab' then Option.bDebug = not Option.bDebug end
+    -- if key == 'capslock' then Option.bGameInfo = not Option.bGameInfo end
     if key == "return" then 
         if Option.sGameState == "MENU" then 
             if Option.bMenuPlayed == true then

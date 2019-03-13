@@ -3,9 +3,7 @@ _G.Scene_1 =
 {
     tbActor = 
     {
-        { sActorType = "Player", sUseName = "Player1",tbProperty = {
-            ["Color"] = { a=0 };
-        }},
+        { sActorType = "Player", sUseName = "Player1" },
     };
 
     tbUI = 
@@ -80,11 +78,7 @@ _G.Scene_1 =
     },
 
     tbSystem = 
-    {
-        "RectangleRenderSystem",
-        "LayerSortSystem",
-        "SpriteRenderSystem",
-        "AnimationSystem",
+    { 
         "Scene1",
     };
 }
