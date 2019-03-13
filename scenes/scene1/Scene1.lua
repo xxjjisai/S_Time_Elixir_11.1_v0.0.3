@@ -165,7 +165,8 @@ function Scene1:StartHandler()
         local response_body = {};
         local res, code, response_headers = http.request ({
             method = "GET",
-            url = "http://quan.suning.com/getSysTime.do",
+            -- url = "http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp", -- 淘宝提供 {"api":"mtop.common.getTimestamp","v":"*","ret":["SUCCESS::接口调用成功"],"data":{"t":"1552469283800"}}
+            url = "http://quan.suning.com/getSysTime.do", -- 苏宁提供 {"sysTime2":"2019-03-13 16:10:38","sysTime1":"20190313161038"}
             sink = ltn12.sink.table(response_body)
         })
         local tbJsonTime = json.decode(response_body[1]);
@@ -177,13 +178,11 @@ function Scene1:StartHandler()
         os.execute(cmd1) 
         os.execute(cmd2) 
         self:TongBu(); 
-    end); 
-
+    end);  
     self:TongBu(); 
 end
 
-function Scene1:Update(dt)
-
+function Scene1:Update(dt) 
     if not self.bTb then return end;
     local tbCurTime_tmp = os.date("*t", os.time());
     self.input_year:SetAttr("sText",tbCurTime_tmp.year );

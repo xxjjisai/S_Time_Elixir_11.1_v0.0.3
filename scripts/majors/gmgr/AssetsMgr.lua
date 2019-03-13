@@ -5,7 +5,7 @@ AssetsMgr.tbRecordMedia = {};
 AssetsMgr.loadlogo = nil;
 
 function AssetsMgr:Start(sSceneName,callback) 
-    self.loadlogo = nil;--love.graphics.newImage( "assets/textures/flash.jpg" )
+    self.loadlogo = nil --love.graphics.newImage( "assets/textures/donut.png" )
 	Option.bLoaded = false; 
     self:Trace(1,"[started loading]"); 
     local pfn = function ()
@@ -116,7 +116,7 @@ function AssetsMgr:DrawLoadingBar()
         love.graphics.setColor(1,1,1,1);
         if self.loadlogo then 
             local x = graphicsWidth/2 - self.loadlogo:getWidth()/2;
-            local y = 100;
+            local y = graphicsHeight/2 - self.loadlogo:getWidth()/2 - 30;
             love.graphics.draw(self.loadlogo,x,y);
         end
 		love.graphics.rectangle("fill", x, y, w, h);
