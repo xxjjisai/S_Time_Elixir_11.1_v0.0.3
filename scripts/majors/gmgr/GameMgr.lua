@@ -11,6 +11,9 @@ function GameMgr:StartUp()
     StorageMgr:InitInfo();
     Option.nMaxSceneCount = GameDataCfg.nMaxSceneCount;
     AssetsMgr:Start("Currency",function()
+        love.graphics.present();
+        love.graphics.setDefaultFilter('nearest', 'nearest', 1);
+        love.graphics.setLineStyle('smooth');
         Option.sGameState = "MENU";
         MenuMgr:Start(0.5,function ()
             Option.bMenuPlayed = true;

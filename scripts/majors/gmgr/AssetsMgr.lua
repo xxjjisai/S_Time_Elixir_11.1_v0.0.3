@@ -5,7 +5,7 @@ AssetsMgr.tbRecordMedia = {};
 AssetsMgr.loadlogo = nil;
 
 function AssetsMgr:Start(sSceneName,callback) 
-    self.loadlogo = nil --love.graphics.newImage( "assets/textures/donut.png" )
+    self.loadlogo = love.graphics.newImage( "assets/textures/789.png" )
 	Option.bLoaded = false; 
     self:Trace(1,"[started loading]"); 
     local pfn = function ()

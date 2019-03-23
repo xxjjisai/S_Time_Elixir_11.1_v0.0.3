@@ -18,9 +18,7 @@ require("include");
 
 -- 系统列表
 function love.load()
-    love.graphics.present();
-    love.graphics.setDefaultFilter('nearest', 'nearest', 1);
-    love.graphics.setLineStyle('smooth');
+
     _G.graphicsWidth  = love.graphics.getWidth();
     _G.graphicsHeight = love.graphics.getHeight();
     _G.screenWidth, _G.screenHeight = love.window.getDesktopDimensions();
